@@ -1,0 +1,42 @@
+conda create -n deepmir_hw1 python=3.10
+
+conda activate deepmir_hw1
+
+# CUDA 11.3
+conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
+
+pip install -r requirements.txt
+
+
+
+
+
+[Download the data set and code supported by TA]
+
+gdown --id 1gRykfOOmKJsxppBo3DT7Nm7gMiPGVUAa
+
+unzip hw1.zip
+
+
+【Task: Multi-Label Instruments Classification】
+
+python datasets.py
+
+nohup python -u train.py --quiet --frozen > outputs_frozen.txt &
+
+nohup python -u train.py --quiet > outputs.txt &
+
+
+python train.py --frozen
+
+python train.py
+
+CUDA_VISIBLE_DEVICES=1 python test.py --threshold 0.7 --frozen 
+
+CUDA_VISIBLE_DEVICES=1 python test.py --threshold 0.2
+
+python plot_pianoroll.py --threshold 0.7 --save_dir results_classifier_frozen
+
+python plot_pianoroll.py --threshold 0.7 --save_dir results_classifier
+
+
