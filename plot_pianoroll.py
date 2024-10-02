@@ -166,8 +166,8 @@ def main(opt):
                                                      chunk_duration=5, threshold=opt.threshold)
 
         # Ensure the predicted pianoroll has the same shape as the true pianoroll
-        print('true_pianoroll.shape: ', true_pianoroll.shape)
-        print('pred_pianoroll.shape: ', pred_pianoroll.shape)
+        # print('true_pianoroll.shape: ', true_pianoroll.shape)
+        # print('pred_pianoroll.shape: ', pred_pianoroll.shape)
 
         # pred_pianoroll is your model predict result please load your results here
         # pred_pianoroll.shape should be [9, L] and the L should be equal to true_pianoroll
