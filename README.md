@@ -103,9 +103,9 @@ python train.py
 #### Testing
 ```bash
 # Testing model with frozen encoder (th: 0.2)
-CUDA_VISIBLE_DEVICES=1 python test.py --threshold 0.2 --frozen
+python test.py --threshold 0.2 --frozen
 # Testing model without frozen encoder (th: 0.2)
-CUDA_VISIBLE_DEVICES=1 python test.py --threshold 0.2
+python test.py --threshold 0.2
 ```
 
 #### Plot Piano Roll
