@@ -115,5 +115,5 @@ python plot_pianoroll.py --threshold 0.2 --save_dir results_classifier_frozen
 # Plot piano roll by multi-label music tagging model without frozen encoder (th: 0.2)
 python plot_pianoroll.py --threshold 0.2 --save_dir results_classifier
 ```
-
+Note: Results will be stored in the `/results_classifier` and `/results_classifier_frozen` folders.
 
